@@ -6,6 +6,7 @@
   </head>
     <body>
         <div class="container">
+          <!--Хедер-->
             <header class="header-page">
                 <nav class="header-nav">
                         <a class="nav-logo"><img src="img/sedona-logo.png" width="138" height="70" alt="Логотип Седоны"></a>
@@ -17,9 +18,11 @@
                         </ul>
                 </nav>
             </header>
+          <!--Основной контент-->
             <main>
                 <div class="panorama">
-                        <img class="panorama-bg" src="img/panorama-bg-img.jpg" width="1200" height="773" alt="Панорама Гранд Каньона">
+                    <h1 class="visually-hidden">Седона, штат Аризона</h1>
+                    <img class="panorama-bg" src="img/panorama-bg-img.jpg" width="1200" height="773" alt="Панорама Гранд Каньона">
                 </div>
                 <article class="about">
                     <div class="about-info">
@@ -77,17 +80,67 @@
                         <p class="reason-5-text">Большинство едет в Гранд-Каньон и толпится там</p>
                     </section>
                 </article>
-          <!-- Секция формы поиска гостиницы   -->
+             <!-- Секция формы поиска гостиницы   -->
                 <section class="search">
                     <div class="searh-info">
-                        <p class="search-title"></p>
-                        <p class="search-text"></p>
+                        <h2 class="search-title">Заинтересовались?</h2>
+                        <p class="search-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
                     </div>
-                    <div class="search-map-wrap">
+                    <div class="search-location">
+                        <div class="search-form-wrap">
+                            <button class=search-btn" type="button" name="open-search">Поиск гостиницы в Седоне</button>
+                            <form action="hotel-search" class="search-form" method="get">
+                                <div class="search-date">
+                                    <label for="date-in" class="search-label">Дата заезда</label>
+                                    <div class="input-wrap">
+                                        <input type="text" class="input-form" placeholder="24 апреля 2017" id="date-in" name="date-in">
+                                        <button class="input-calendar" type="button" name="calendar">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="search-date">
+                                    <label for="date-out" class="search-label">Дата выезда</label>
+                                    <div class="input-wrap">
+                                        <input type="text" class="input-form" placeholder="4 июля 2017" id="date-in" name="date-out">
+                                        <button class="input-calendar" type="button" name="calendar">
+                                        </button>
+                                   </div>
+                                </div>
+                                <div class="search-date search-column">
+                                    <div class="search-column-all search-column-1">
+                                        <label for="adults" class="search-label">Взрослые</label>
+                                        <div class="input-wrap input-wrap-count">
+                                            <button class="control-btn control-decr" type="button">
+                                                <span class="visually-hidden">Уменьшить</span>
+                                            </button>
+                                            <input type="text" class="input-form" value="2" id="adults" name="adults">
+                                            <button class="control-btn control-incr" type="button">
+                                                <span class="visually-hidden">Увеличить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="search-column-all search-column-2">
+                                        <label for="child" class="search-label">Дети</label>
+                                        <div class="input-wrap input-wrap-count">
+                                            <button class="control-btn control-decr" type="button">
+                                              <span class="visually-hidden">Уменьшить</span>
+                                            </button>
+                                            <input type="text" class="input-form" value="0" id="child" name="child">
+                                            <button class="control-btn control-incr" type="button">
+                                                <span class="visually-hidden">Увеличить</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="search-main btn-submit" type="submit" name="search-main">Найти</button>
+                            </form>
+                        </div>
+                     <!--Карты: обычная и интерактивная-->
                         <section class="map">
+                            <h2 class="visually-hidden">Расположение Седоны на карте</h2>
                             <img class="map-img" src="img/map.png" width="1200" height="593" alt="Седона на карте">
+                            <div class="map-interactive"><span class="visually-hidden">Седона на интерактивной карте</span></div>
                         </section>
-          <!--Здесь будет форма-->
                     </div>
                 </section>
             </main>
