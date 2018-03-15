@@ -61,13 +61,32 @@
                                     </ul>
                                 </fieldset>
                             </div>
-                            <div>
-                        <!--здесь будет фильтр по стоимости в сутки-->
+                 <!--Фильтр по стоимости в сутки-->
+                            <div class="filter-price">
+                                <fieldset class="filter-price-fild">
+                                    <legend class="filter-price-legend">Стоимость в сутки(Р):</legend>
+                                        <div class="filter-input">
+                                            <label class="filter-input-label input-min">От<input type="text" name="input-min" value="0"></label>
+                                            <label class="filter-input-label input-max">До<input type="text" name="input-max" value="3000"></label>
+                                        </div>
+                                        <div class="price-range">
+                                            <label>
+                                                <span class="visually-hidden">Минимальная цена</span>
+                                                <input type="range" name="control-min" min="0" max="2900" step="1" value="0">
+                                            </label>
+                                            <label>
+                                                <span class="visually-hidden">Максимальная цена</span>
+                                                <input type="range" name="control-max" min="100" max="3000" step="1" value="3000">
+                                            </label>
+                                        </div>
+                                        <div class="price-control">
+                                            <button class="control-btn" type="submit" name="result-show">Показать</button>
+                                        </div>
+                                </fieldset>
                             </div>
                         </div>
                     </form>
                 </section>
-
         <!-- Строка выбора условий сортировки результатов поиска -->
                 <section class="hotel">
                     <h2 class="visually-hidden">Результаты поиска отелей в Седоне</h2>
