@@ -15,8 +15,16 @@ a {
   text-decoration: none;
 }
 
-.menu {
+.container {
+  background-color: #ffffff;
+}
+
+.list-unstyled {
   list-style: none;
+}
+
+.menu {
+
 }
 
 .menu-item {
@@ -29,11 +37,13 @@ a {
 .menu-item:hover{
   color: #81b3d2;
 }
+
 .menu-item:active {
-  color: #766357;
+  color: rgba(0, 0, 0, 0.3);
 }
-.menu-item:focus {
-  color: #cacaca;
+
+.menu-item .current {
+  color: #766357;
 }
 
 .about-title {
@@ -53,15 +63,14 @@ a {
   font-weight: 700;
 }
 
-.reason-1-info {
-  color: #ffffff;
-  background-color: #81b3d2;
-}
-
 .reason-1-info,
 .reason-2-info {
   color: #ffffff;
   background-color: #81b3d2;
+}
+
+.reason-group {
+  background-color: #eeeeee;
 }
 
 /*Иконки */
@@ -95,6 +104,10 @@ a {
   font-weight: 700;
 }
 
+.search-form-wrap {
+  background-color: #ffffff;
+}
+
 .search-btn {
   font-size: 21px;
   line-height: 26px;
@@ -103,13 +116,71 @@ a {
   background-color: #766357;
 }
 
-.search-form {
-  font-size: 14px;
+.search-btn:hover {
+  background-color: #604e43;
+}
+
+.search-btn:active {
+  background-color: #503e33;
+}
+
+.search-label {
   line-height: 26px;
   font-weight: 700;
-  color: #000000;
+}
+
+.input-form {
+  line-height: 26px;
+  font-weight: 700;
   background-color: #f2f2f2;
 }
+
+.input-form:hover {
+  background-color: #ebebeb;
+}
+
+.input-form:focus {
+  background-color: #ffffff;
+}
+
+.input-calendar {
+  border: none;
+}
+
+.calendar-icon {
+  fill: #cacaca;
+}
+
+.input-calendar:hover .calendar-icon,
+.input-calendar:focus .calendar-icon {
+  fill: #000000;
+}
+
+.input-calendar:active .calendar-icon {
+   fill: #81b3d2;
+}
+
+.input-wrap {
+  background-color: #f2f2f2;
+}
+
+.minus,
+.plus {
+  fill:#a9a9a9;
+  vertical-align: middle;
+}
+
+.minus:hover,
+.plus:hover {
+  fill:#000000;
+}
+
+.minus:active,
+.plus:active {
+  fill:#81b3d2;
+}
+
+
 
 .btn-submit {
   font-size: 21px;
@@ -119,15 +190,20 @@ a {
   background-color: #81b3d2;
 }
 
+.btn-submit:hover{
+  background-color: #669ec0;
+}
+
+.btn-submit:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
 .page-footer-more a {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
-}
-
-.social {
-  list-style: none;
 }
 
 .tw-link{
@@ -162,7 +238,7 @@ a {
 }
 
 .social-link:active {
-  background-color: #5496bd;
+  color: rgba(84, 150, 189, 0.3);
 }
 
 .copyright-text {
@@ -183,16 +259,25 @@ a {
   font-weight: 700;
 }
 
+
+/* Кнопка фильтра поиска */
+
 .control-btn {
   font: inherit;
   font-size: inherit;
   background-color: transparent;
   color: inherit;
+  text-transform: inherit;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
-.hotel-select-list {
-  list-style: none;
+.control-btn:hover,
+.control-btn:focus {
+  color: #000000;
+  background-color: #ffffff;
 }
+
 
 .hotel-select-title {
   font-size: 21px;
@@ -210,17 +295,50 @@ a {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  color: #a8c9de;
+  color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
+  border-bottom: 1px dotted #81b3d2;
 }
 
 .link-active {
   color: #81b3d2;
+  border-color: transparent;
+  pointer-events: none;
 }
 
-.hotels-catalog {
-  list-style: none;
+.hotel-select-link:hover,
+.hotel-select-link:focus {
+  color: #81b3d2;
 }
+
+.hotel-select-link:active {
+  color: #000000;
+  border-color: transparent;
+}
+
+.pointer-active {
+  fill:#81b3d2;
+}
+
+.pointer-up,
+.pointer-down {
+  background-color: white;
+  border:0px solid;
+  width: 12px;
+  cursor: pointer;
+}
+.point-img-up {
+  fill: #cacaca;
+}
+.point-img-up:hover,
+.point-img-down:hover {
+  fill:#000000;
+}
+.point-img-up:active,
+.point-img-down:active {
+  fill:#81b3d2;
+}
+
 
 .hotels-name-link {
   font-size: 21px;
@@ -242,10 +360,58 @@ a {
   background-color: #81b3d2;
 }
 
+.hotels-more-info:hover {
+  background-color: #669ec0;
+}
+
+.hotels-more-info:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
 .hotels-item-proceed {
   background-color: #766357;
 }
 
+.hotels-item-proceed:hover {
+  background-color: #604e43;
+}
+
+.hotels-item-proceed:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
+.star {
+  display: inline-block;
+  overflow: hidden;
+  font-size: 0;
+  width: 18px;
+  height: 17px;
+  margin-left: 4.5px;
+  background: url(../img/star.svg);
+}
+
 .rating {
   color: #666666;
+}
+
+.copyright-link {
+  width: 115px;
+  height: 41px;
+}
+
+.html-academy-logo {
+  width: 115px;
+  height: 41px;
+  fill: #231f20;
+}
+
+
+.html-academy-logo:hover {
+  fill: #81b3d2;
+}
+
+.html-academy-logo:active {
+  fill: #bdbbbc;
 }
