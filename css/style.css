@@ -15,12 +15,24 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100% ;
+}
 .container {
   background-color: #ffffff;
 }
 
 .list-unstyled {
   list-style: none;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-logo {
+  order: 2;
 }
 
 .menu {
@@ -31,7 +43,6 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: #000000;
-  background-color: #f2f2f2;
 }
 
 .menu-item:hover{
@@ -42,7 +53,7 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.menu-item .current {
+.menu-item.current {
   color: #766357;
 }
 
@@ -57,7 +68,7 @@ a {
   line-height: 26px;
 }
 
-.headline {
+.features-title {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
@@ -73,7 +84,19 @@ a {
   background-color: #eeeeee;
 }
 
-/*Иконки */
+/* Иконки первой причины крутости */
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features-item {
+
+
+}
+
 .housing-icon {
   width: 75px;
   height: 72px;
@@ -104,7 +127,7 @@ a {
   font-weight: 700;
 }
 
-.search-form-wrap {
+.search-form {
   background-color: #ffffff;
 }
 
@@ -197,6 +220,10 @@ a {
 .btn-submit:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
+}
+
+.page-footer {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .page-footer-more a {
